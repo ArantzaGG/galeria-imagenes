@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+body.light-theme {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #fbd9fc;
+  }
+  
+  /* Estilos para el modo oscuro */
+  body.dark-theme {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #88789b;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .mat-toolbar {
+    background-color: var(--primary-color) !important;
+  }
+

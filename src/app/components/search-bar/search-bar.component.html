@@ -1,0 +1,13 @@
+<div class="search-bar-container">
+  <mat-toolbar color="primary" class="search-bar">
+    <mat-form-field appearance="fill" class="search-bar-input">
+      <mat-label>Buscar imágenes</mat-label>
+      <input matInput #searchInput/>
+    </mat-form-field>
+    <button class="button" mat-button (click)="onSearchClick(searchInput.value)">Buscar</button>
+  </mat-toolbar>
+  <div class="pagination-buttons">
+    <button mat-button (click)="onPreviousPage(searchInput.value)">Anterior</button>
+    <button mat-button (click)="onNextPage(searchInput.value)">Siguiente</button>
+  </div>
+</div>

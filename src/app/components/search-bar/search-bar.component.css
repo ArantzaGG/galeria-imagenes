@@ -1,0 +1,65 @@
+.search-bar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: rgb(79, 65, 92);
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+  background-color: white;
+}
+
+.search-bar mat-form-field {
+  flex: 1;
+  margin: 0;
+}
+
+.search-bar-input {
+  width: 50%;
+  padding-top: 20px;
+  margin: 10px;
+  font-size: 16px;
+}
+
+.button {
+  width: 30%;
+  padding: 10px 20px;
+  border: none;
+  background-color: #8a6b91;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.search-bar button:hover {
+  background-color: #d783e7;
+}
+
+.search-bar:focus-within {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.pagination-buttons button {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    margin: 10px;
+    color: whitesmoke;
+    background-color: #8a6b91;
+}
+.pagination-buttons button:hover {
+  color: #d783e7;
+}

@@ -1,0 +1,7 @@
+<app-search-bar
+  (search)="onSearch($event)"
+  (nextPage)="onNextPage()"
+  (previousPage)="onPreviousPage()"
+></app-search-bar>
+<mat-slide-toggle (change)="toggleTheme()">Cambiar modo</mat-slide-toggle>
+<app-image-grid [images]="images"></app-image-grid>
