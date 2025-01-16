@@ -7,6 +7,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material.module';
 import { FavoritesService } from './core/favorites.service';
+import { FavoriteImagesComponent } from './components/favorite-images/favorite-images.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { FavoritesService } from './core/favorites.service';
     HttpClientModule,
     CommonModule,
     MaterialModule,
+    FavoriteImagesComponent,
   ],
 })
 export class AppComponent {
@@ -36,11 +38,6 @@ export class AppComponent {
   ) {}
 
   ngOnInit() {
-    // this.unsplashService.createCollection('Favoritos', 'Colección de imágenes favoritas').subscribe((response) => {
-    //   this.collectionId = response.id;
-    //   console.log('Collection created', response);
-    // });
-
     const theme = localStorage.getItem('theme') || 'light-theme';
     this.isDarkTheme = theme === 'dark-theme';
     document.body.className = theme;

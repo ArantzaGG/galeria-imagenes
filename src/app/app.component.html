@@ -5,4 +5,8 @@
   (random)="onRandom()"
 ></app-search-bar>
 <mat-slide-toggle (change)="toggleTheme()">Cambiar modo</mat-slide-toggle>
-<app-image-grid [images]="images" (favoriteToggled)="toggleFavorite($event)"></app-image-grid>
+<app-favorite-images></app-favorite-images>
+<app-image-grid
+  [images]="images"
+  (favoriteToggled)="toggleFavorite($event)"
+></app-image-grid>
