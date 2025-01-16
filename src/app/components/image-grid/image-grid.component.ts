@@ -11,7 +11,8 @@ import { CardComponent } from '../card/card.component';
   imports: [MaterialModule, CommonModule, CardComponent]
 })
 export class ImageGridComponent {
-  @Input() images: any[] = []; // Recibimos las imágenes desde el componente principal (AppComponent)
+  @Input() images: any[] = []; 
+  @Input() collectionId: string = ''; 
 
   constructor() {}
 }

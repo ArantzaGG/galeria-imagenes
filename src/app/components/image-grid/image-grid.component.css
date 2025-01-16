@@ -1,0 +1,10 @@
+.image-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    flex: 1 1 calc(33.333% - 20px);
+}
+

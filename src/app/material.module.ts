@@ -11,12 +11,14 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle'
+import { MatSelectModule } from '@angular/material/select';
+
 
 
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, MatToolbarModule, MatTableModule, MatPaginatorModule, MatSortModule, MatCardModule, MatButtonModule, MatIconModule, MatInputModule, ReactiveFormsModule, MatFormFieldModule, MatSlideToggleModule],
-  exports: [CommonModule, MatToolbarModule, MatTableModule, MatPaginatorModule, MatSortModule, MatCardModule, MatButtonModule, MatIconModule, MatInputModule, ReactiveFormsModule, MatFormFieldModule, MatSlideToggleModule]
+  imports: [CommonModule, MatToolbarModule, MatTableModule, MatPaginatorModule, MatSortModule, MatCardModule, MatButtonModule, MatIconModule, MatInputModule, ReactiveFormsModule, MatFormFieldModule, MatSlideToggleModule, MatSelectModule],
+  exports: [CommonModule, MatToolbarModule, MatTableModule, MatPaginatorModule, MatSortModule, MatCardModule, MatButtonModule, MatIconModule, MatInputModule, ReactiveFormsModule, MatFormFieldModule, MatSlideToggleModule, MatSelectModule]
 })
 export class MaterialModule { }

@@ -1,13 +1,50 @@
-<div class="search-bar-container">
+<form
+  class="search-bar-container"
+  [formGroup]="searchForm"
+  (ngSubmit)="onSearchClick()"
+  novalidate
+>
   <mat-toolbar color="primary" class="search-bar">
-    <mat-form-field appearance="fill" class="search-bar-input">
-      <mat-label>Buscar imágenes</mat-label>
-      <input matInput #searchInput/>
+    <mat-form-field appearance="outline" class="search-bar-input">
+      <mat-label>Buscar por palabra clave</mat-label>
+      <input
+        matInput
+        #searchInput
+        formControlName="query"
+        (keyup.enter)="onSearchClick()"
+      />
+      @if (searchForm.get('query')?.touched && !searchForm.get('query')?.value && !searchForm.get('category')?.value) {
+        <mat-error>Debes rellenar este campo o buscar por categoría</mat-error>
+      }
     </mat-form-field>
-    <button class="button" mat-button (click)="onSearchClick(searchInput.value)">Buscar</button>
+    <mat-form-field appearance="outline" class="search-bar-select">
+      <mat-label>Buscar por categoría</mat-label>
+      <mat-select formControlName="category">
+        <mat-option [value]="null">Ninguna</mat-option>
+        <mat-option
+          *ngFor="let category of categories"
+          [value]="category.value"
+        >
+          {{ category.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button class="button" mat-button (click)="onSearchClick()">Buscar</button>
   </mat-toolbar>
   <div class="pagination-buttons">
-    <button mat-button (click)="onPreviousPage(searchInput.value)">Anterior</button>
-    <button mat-button (click)="onNextPage(searchInput.value)">Siguiente</button>
+    <button
+      class="button"
+      mat-button
+      (click)="onPreviousPage(searchInput.value)"
+    >
+      Anterior
+    </button>
+    <button class="button" mat-button (click)="onNextPage(searchInput.value)">
+      Siguiente
+    </button>
+    <button class="button random-button" mat-button (click)="onRandomClick()">
+      Muestra 10 imágenes al azar
+    </button>
   </div>
-</div>
+</form>
